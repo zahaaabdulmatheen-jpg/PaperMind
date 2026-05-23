@@ -234,3 +234,10 @@ button:hover{
     top: 0;
     left: 100%;
 }
+/* Small dropdown arrows */
+
+.arrow{
+    font-size: 10px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
