@@ -2,51 +2,126 @@
 <html>
 <head>
   <title>Past Papers Hub</title>
+
   <style>
     body {
       font-family: Arial;
       margin: 0;
-      text-align: center;
-      background: #f4f4f4;
+      background: #f3f7f4; /* soft calm background */
     }
 
+    /* Header */
     .header {
-      background: #800000;
+      background: #3f7d5a; /* soft green */
       color: white;
-      padding: 25px;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .container {
-      margin-top: 40px;
+    .menu-icon {
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* Side menu */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #3f7d5a;
+      color: white;
+      padding-top: 60px;
+      transition: 0.3s;
+    }
+
+    .side-menu a {
+      display: block;
+      padding: 15px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .side-menu a:hover {
+      background: #2f5e43;
+    }
+
+    /* Hero section */
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 40px;
+      color: #2f5e43;
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 18px;
     }
 
     .btn {
-      display: block;
-      width: 220px;
-      margin: 15px auto;
-      padding: 15px;
-      background: #800000;
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 25px;
+      background: #3f7d5a;
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 12px;
     }
 
     .btn:hover {
-      background: #a00000;
+      background: #2f5e43;
+    }
+
+    /* Decorative books */
+    .books {
+      margin-top: 40px;
+      font-size: 60px;
     }
   </style>
 </head>
 
 <body>
 
+  <!-- Header -->
   <div class="header">
-    <h1>📚 Past Papers Hub</h1>
-    <p>Free revision resources</p>
+    <div>📚 Past Papers Hub</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </div>
 
-  <div class="container">
-    <a class="btn" href="subjects.html">Start Browsing Subjects</a>
+  <!-- Side Menu -->
+  <div id="menu" class="side-menu">
+    <a href="index.html">Home</a>
+    <a href="subjects.html">Subjects</a>
   </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="books">📖 📚 📖</div>
+
+    <h1>Study Smarter</h1>
+    <p>Free past papers, revision resources, and exam prep tools</p>
+
+    <a class="btn" href="subjects.html">Browse Subjects</a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+
+      if (menu.style.left === "0px") {
+        menu.style.left = "-250px";
+      } else {
+        menu.style.left = "0px";
+      }
+    }
+  </script>
 
 </body>
 </html>
