@@ -1,248 +1,178 @@
+/* General Styling */
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body{
-    font-family:'Poppins', sans-serif;
-    background: linear-gradient(to right, #d7dec8, #b8c5a5);
-    min-height:100vh;
-    overflow-x:hidden;
-    position:relative;
+    font-family: Georgia, serif;
+    background-color: #bcc6aa;
+    color: #1e2b20;
 }
 
-/* NAVBAR */
+/* NAVIGATION */
 
 .navbar{
-    width:95%;
-    margin:20px auto;
-    padding:12px 20px;
+    width: 95%;
+    margin: 20px auto;
+    border: 2px solid #1e2b20;
+    border-radius: 15px;
+    padding: 15px 25px;
 
-    border:1px solid #3d4630;
-    border-radius:14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-    display:flex;
-    align-items:center;
-    gap:30px;
-
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(5px);
+    background-color: rgba(255,255,255,0.1);
 }
 
-.logo-small{
-    font-size:28px;
-    cursor:pointer;
+.logo{
+    font-size: 28px;
+    margin-right: 30px;
+    cursor: pointer;
 }
 
 .nav-links{
-    display:flex;
-    list-style:none;
-    gap:35px;
+    list-style: none;
+    display: flex;
+    gap: 40px;
 }
 
 .nav-links li{
-    position:relative;
+    position: relative;
 }
 
 .nav-links a{
-    text-decoration:none;
-    color:#1d2418;
-    font-size:18px;
-    transition:0.3s;
+    text-decoration: none;
+    color: #1e2b20;
+    font-size: 18px;
+    transition: 0.3s;
 }
 
 .nav-links a:hover{
-    color:#4f6840;
+    color: #3f5c45;
 }
 
-/* DROPDOWN */
+/* Dropdown */
 
 .dropdown-menu,
-.nested-menu{
-    display:none;
-    position:absolute;
-    background:#e7eddc;
-    padding:10px;
-    border-radius:10px;
-    min-width:180px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+.sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #d8dfcb;
+    min-width: 200px;
+    border-radius: 10px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li,
+.sub-menu li{
+    padding: 10px 20px;
 }
 
 .dropdown:hover .dropdown-menu{
-    display:block;
+    display: block;
 }
 
-.nested-dropdown:hover .nested-menu{
-    display:block;
-    left:100%;
-    top:0;
+.sub-dropdown:hover .sub-menu{
+    display: block;
+    left: 100%;
+    top: 0;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    min-height: 85vh;
 
-    padding:60px 8%;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.hero-text{
-    max-width:500px;
+    padding: 60px 80px;
 }
 
 .hero-text h1{
-    font-size:110px;
-    line-height:0.9;
-    color:#214734;
-    font-family:'Cormorant Garamond', serif;
+    font-size: 110px;
+    line-height: 0.9;
+    color: #1f4d46;
+    font-style: italic;
 }
 
 .hero-text span{
-    color:#000;
-    font-style:italic;
-    font-size:90px;
+    font-size: 85px;
+    color: black;
 }
 
 .tagline{
-    margin-top:25px;
-    font-size:24px;
-    color:#2d3327;
-    line-height:1.5;
+    margin-top: 30px;
+    font-size: 28px;
+    width: 500px;
+    line-height: 1.5;
 }
 
-.hero-text button{
-    margin-top:30px;
-    padding:14px 28px;
-    border:none;
-    border-radius:30px;
-    background:#214734;
-    color:white;
-    font-size:17px;
-    cursor:pointer;
-    transition:0.3s;
+button{
+    margin-top: 40px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background-color: #1f4d46;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.hero-text button:hover{
-    transform:scale(1.05);
-    background:#2f6047;
+button:hover{
+    background-color: #355e56;
+    transform: scale(1.05);
 }
-
-/* IMAGE */
 
 .hero-image img{
-    width:430px;
-    animation:float 4s ease-in-out infinite;
+    width: 430px;
 }
 
-@keyframes float{
-    0%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-15px);
-    }
-
-    100%{
-        transform:translateY(0);
-    }
-}
-
-/* DECOR */
-
-.decor{
-    position:absolute;
-    border-radius:50%;
-    filter:blur(90px);
-    opacity:0.4;
-}
-
-.decor1{
-    width:250px;
-    height:250px;
-    background:#91a87c;
-    top:50px;
-    left:-70px;
-}
-
-.decor2{
-    width:200px;
-    height:200px;
-    background:#758e65;
-    bottom:30px;
-    right:120px;
-}
-
-.decor3{
-    width:180px;
-    height:180px;
-    background:#dce5cf;
-    top:300px;
-    right:450px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .hero-image img{
-        width:300px;
-        margin-top:40px;
-    }
-
-    .hero-text h1{
-        font-size:75px;
-    }
-
-    .hero-text span{
-        font-size:60px;
-    }
-
-    .nav-links{
-        gap:15px;
-        font-size:14px;
-        flex-wrap:wrap;
-    }
-}
 /* SUBJECT PAGE */
 
-.subjects-page{
-    padding:70px;
-    text-align:center;
+.subject-page{
+    padding: 60px;
+    text-align: center;
 }
 
-.subjects-page h1{
-    font-size:60px;
-    color:#214734;
-    margin-bottom:50px;
+.subject-page h1{
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #1f4d46;
 }
 
-.subject-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
+.subject-container{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
 }
 
 .subject-card{
-    background:rgba(255,255,255,0.2);
-    padding:50px 20px;
-    border-radius:20px;
-    text-decoration:none;
-    color:#1c2518;
-    font-size:28px;
-    transition:0.3s;
-    backdrop-filter:blur(5px);
+    background-color: #dfe6d2;
+    padding: 40px;
+    width: 250px;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
 
 .subject-card:hover{
-    transform:translateY(-10px);
-    background:#dfe8d0;
+    transform: translateY(-10px);
+}
+
+.subject-card h2{
+    margin-bottom: 15px;
+}
+
+.subject-card p{
+    font-size: 16px;
 }
