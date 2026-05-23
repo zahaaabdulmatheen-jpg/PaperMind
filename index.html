@@ -1,158 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Past Papers Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Minds</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f3f7f4;
-    }
+    <link rel="stylesheet" href="style.css">
 
-    /* HEADER */
-    .header {
-      background: #3f7d5a;
-      color: white;
-      padding: 15px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .menu-icon {
-      font-size: 26px;
-      cursor: pointer;
-    }
-
-    /* SIDE MENU */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      left: -260px;
-      width: 260px;
-      height: 100%;
-      background: #3f7d5a;
-      padding-top: 60px;
-      transition: 0.3s;
-    }
-
-    .side-menu a {
-      display: block;
-      padding: 15px;
-      color: white;
-      text-decoration: none;
-    }
-
-    .side-menu a:hover {
-      background: #2f5e43;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .hero h1 {
-      color: #2f5e43;
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      color: #555;
-      font-size: 18px;
-    }
-
-    /* CARDS */
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 40px;
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      width: 200px;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      color: #3f7d5a;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #3f7d5a;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-    }
-
-    .btn:hover {
-      background: #2f5e43;
-    }
-  </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div>📚 Past Papers Hub</div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-  </div>
+    <header>
+        <nav class="navbar">
 
-  <!-- SIDE MENU -->
-  <div id="menu" class="side-menu">
-    <a href="index.html">Home</a>
-    <a href="subjects.html">Subjects</a>
-  </div>
+            <div class="logo-small">☰</div>
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Study Smarter</h1>
-    <p>Past papers, revision tools, and exam prep in one place</p>
-  </div>
+            <ul class="nav-links">
 
-  <!-- FEATURE CARDS -->
-  <div class="cards">
-    <div class="card">
-      <h3>📘 Subjects</h3>
-      <p>Browse all subjects</p>
-      <a class="btn" href="subjects.html">Open</a>
-    </div>
+                <li class="dropdown">
+                    <a href="#">Past Papers ▾</a>
 
-    <div class="card">
-      <h3>📄 Past Papers</h3>
-      <p>Coming soon</p>
-    </div>
+                    <ul class="dropdown-menu">
+                        <li class="nested-dropdown">
+                            <a href="#">GCSE ▸</a>
 
-    <div class="card">
-      <h3>🤖 AI Solver</h3>
-      <p>Coming soon</p>
-    </div>
-  </div>
+                            <ul class="nested-menu">
+                                <li><a href="gcse/maths.html">Maths</a></li>
+                                <li><a href="gcse/biology.html">Biology</a></li>
+                                <li><a href="gcse/chemistry.html">Chemistry</a></li>
+                            </ul>
+                        </li>
 
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById("menu");
+                        <li class="nested-dropdown">
+                            <a href="#">A-Level ▸</a>
 
-      if (menu.style.left === "0px") {
-        menu.style.left = "-260px";
-      } else {
-        menu.style.left = "0px";
-      }
-    }
-  </script>
+                            <ul class="nested-menu">
+                                <li><a href="alevel/maths.html">Maths</a></li>
+                                <li><a href="alevel/physics.html">Physics</a></li>
+                                <li><a href="alevel/economics.html">Economics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="subjects.html">Subjects</a></li>
+
+                <li><a href="#">Mark Schemes ▾</a></li>
+
+                <li><a href="#">Solve Papers ▾</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>PAPER<br><span>minds</span></h1>
+
+            <p class="tagline">
+                Study smarter. Score higher. Everything you need in one place.
+            </p>
+
+            <button>Explore Papers</button>
+
+        </div>
+
+        <div class="hero-image">
+            <img src="assets/books.png" alt="Books Illustration">
+        </div>
+
+    </section>
+
+    <div class="decor decor1"></div>
+    <div class="decor decor2"></div>
+    <div class="decor decor3"></div>
 
 </body>
 </html>
