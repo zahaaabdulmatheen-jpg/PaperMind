@@ -14,41 +14,112 @@
 <body>
 
 <header>
+
     <nav class="navbar">
 
+        <!-- HAMBURGER -->
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+        <!-- LOGO -->
         <div class="logo">📚 Paper Minds</div>
 
-        <ul class="nav-links">
-            <li><a href="papers.html">Past Papers</a></li>
-            <li><a href="markschemes.html">Mark Schemes</a></li>
-            <li><a href="solve.html">Solve Papers</a></li>
+        <!-- NAV -->
+        <ul id="menu" class="nav-links">
+
+            <!-- PAST PAPERS -->
+            <li class="dropdown">
+                <a href="#">Past Papers ▾</a>
+
+                <ul class="dropdown-menu">
+
+                    <!-- A LEVEL -->
+                    <li class="nested-dropdown">
+                        <a href="#">A-Level ▸</a>
+
+                        <ul class="nested-menu">
+                            <li>Economics</li>
+                            <li>Accounting</li>
+                            <li>Business Studies</li>
+                            <li>Physics</li>
+                            <li>Biology</li>
+                            <li>Chemistry</li>
+                            <li>Mathematics</li>
+                        </ul>
+                    </li>
+
+                    <!-- GCSE -->
+                    <li class="nested-dropdown">
+                        <a href="#">GCSE ▸</a>
+
+                        <ul class="nested-menu">
+                            <li>Economics</li>
+                            <li>Accounting</li>
+                            <li>Business Studies</li>
+                            <li>Physics</li>
+                            <li>Biology</li>
+                            <li>Chemistry</li>
+                            <li>Mathematics</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <!-- MARK SCHEMES -->
+            <li class="dropdown">
+                <a href="#">Mark Schemes ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li>Coming soon</li>
+                </ul>
+            </li>
+
+            <!-- SOLVE PAPERS -->
+            <li class="dropdown">
+                <a href="#">Solve Papers ▾</a>
+
+                <ul class="dropdown-menu">
+                    <li>AI Solver coming soon</li>
+                </ul>
+            </li>
+
         </ul>
 
     </nav>
+
 </header>
 
+<!-- HERO -->
 <section class="hero">
 
+    <!-- TEXT -->
     <div class="hero-text">
 
         <h1>PAPER<br><span>MINDS</span></h1>
 
-        <p class="tagline">
-            Past papers, mark schemes, and AI-powered solving — all in one place.
+        <p class="subtitle">
+            Master your exams with structured past papers, mark schemes, and smart practice tools.
         </p>
-
-        <a href="papers.html" class="cta-button">Start Practising</a>
 
     </div>
 
+    <!-- IMAGE -->
     <div class="hero-image">
         <img src="assets/books.png" alt="Books">
     </div>
 
 </section>
 
+<!-- DECOR -->
 <div class="decor decor1"></div>
 <div class="decor decor2"></div>
+<div class="decor decor3"></div>
+
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
