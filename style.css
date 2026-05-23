@@ -9,119 +9,149 @@ body{
     background: linear-gradient(to right, #d7dec8, #b8c5a5);
     min-height:100vh;
     overflow-x:hidden;
+    position:relative;
 }
 
-/* ================= NAVBAR ================= */
+/* NAVBAR */
 
 .navbar{
-    width:100%;
-    padding:15px 20px;
+    width:95%;
+    margin:20px auto;
+    padding:12px 20px;
+
+    border:1px solid #3d4630;
+    border-radius:14px;
+
     display:flex;
     align-items:center;
-    justify-content:flex-start;
-    gap:20px;
+    gap:30px;
+
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(5px);
 }
 
-/* HAMBURGER */
-.menu-icon{
+.logo-small{
     font-size:28px;
     cursor:pointer;
-    color:#214734;
 }
 
-/* MENU (hidden until hamburger clicked) */
 .nav-links{
-    list-style:none;
-    display:none;
-    flex-direction:column;
-    gap:15px;
-    padding:20px;
-    background:rgba(255,255,255,0.9);
-    border-radius:12px;
-    width:250px;
-}
-
-/* SHOW MAIN MENU */
-.nav-links.active{
     display:flex;
+    list-style:none;
+    gap:35px;
 }
 
-/* LINKS */
+.nav-links li{
+    position:relative;
+}
+
 .nav-links a{
     text-decoration:none;
-    color:#214734;
+    color:#1d2418;
     font-size:18px;
+    transition:0.3s;
 }
 
-/* ================= DROPDOWNS ================= */
+.nav-links a:hover{
+    color:#4f6840;
+}
 
-/* hidden by default */
-.dropdown,
-.nested{
+/* DROPDOWN */
+
+.dropdown-menu,
+.nested-menu{
     display:none;
-    flex-direction:column;
-    margin-left:15px;
-    margin-top:10px;
-    gap:8px;
+    position:absolute;
+    background:#e7eddc;
+    padding:10px;
+    border-radius:10px;
+    min-width:180px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
 }
 
-/* show when active */
-.dropdown.show{
-    display:flex;
+.dropdown:hover .dropdown-menu{
+    display:block;
 }
 
-.nested.show{
-    display:flex;
+.nested-dropdown:hover .nested-menu{
+    display:block;
+    left:100%;
+    top:0;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:70px 8%;
+
+    padding:60px 8%;
 }
 
-/* TEXT */
 .hero-text{
     max-width:500px;
 }
 
 .hero-text h1{
-    font-size:100px;
-    font-family:'Cormorant Garamond', serif;
-    color:#214734;
+    font-size:110px;
     line-height:0.9;
+    color:#214734;
+    font-family:'Cormorant Garamond', serif;
 }
 
 .hero-text span{
     color:#000;
     font-style:italic;
-    font-size:85px;
+    font-size:90px;
 }
 
-.subtitle{
+.tagline{
     margin-top:25px;
-    font-size:22px;
+    font-size:24px;
     color:#2d3327;
-    line-height:1.6;
-    max-width:450px;
+    line-height:1.5;
+}
+
+.hero-text button{
+    margin-top:30px;
+    padding:14px 28px;
+    border:none;
+    border-radius:30px;
+    background:#214734;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.hero-text button:hover{
+    transform:scale(1.05);
+    background:#2f6047;
 }
 
 /* IMAGE */
+
 .hero-image img{
-    width:420px;
-    animation: float 4s ease-in-out infinite;
+    width:430px;
+    animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-20px);}
-    100%{transform:translateY(0);}
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
 }
 
-/* ================= DECOR ================= */
+/* DECOR */
 
 .decor{
     position:absolute;
@@ -134,19 +164,27 @@ body{
     width:250px;
     height:250px;
     background:#91a87c;
-    top:60px;
-    left:-80px;
+    top:50px;
+    left:-70px;
 }
 
 .decor2{
-    width:220px;
-    height:220px;
+    width:200px;
+    height:200px;
     background:#758e65;
-    bottom:40px;
+    bottom:30px;
     right:120px;
 }
 
-/* ================= MOBILE ================= */
+.decor3{
+    width:180px;
+    height:180px;
+    background:#dce5cf;
+    top:300px;
+    right:450px;
+}
+
+/* MOBILE */
 
 @media(max-width:900px){
 
@@ -155,16 +193,22 @@ body{
         text-align:center;
     }
 
+    .hero-image img{
+        width:300px;
+        margin-top:40px;
+    }
+
     .hero-text h1{
-        font-size:70px;
+        font-size:75px;
     }
 
     .hero-text span{
         font-size:60px;
     }
 
-    .hero-image img{
-        width:300px;
-        margin-top:40px;
+    .nav-links{
+        gap:15px;
+        font-size:14px;
+        flex-wrap:wrap;
     }
 }
