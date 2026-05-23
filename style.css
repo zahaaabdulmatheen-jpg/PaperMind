@@ -1,4 +1,3 @@
-/* RESET */
 *{
     margin:0;
     padding:0;
@@ -12,47 +11,71 @@ body{
     overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 .navbar{
-    width:95%;
-    margin:20px auto;
-    padding:12px 25px;
-
-    border:1px solid #3d4630;
-    border-radius:14px;
-
+    width:100%;
+    padding:15px 20px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(6px);
+    justify-content:flex-start;
+    gap:20px;
 }
 
-.logo{
-    font-size:22px;
-    font-weight:600;
-    color:#1d2418;
+/* HAMBURGER */
+.menu-icon{
+    font-size:28px;
+    cursor:pointer;
+    color:#214734;
 }
 
+/* MENU (hidden until hamburger clicked) */
 .nav-links{
-    display:flex;
     list-style:none;
-    gap:30px;
+    display:none;
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
+    background:rgba(255,255,255,0.9);
+    border-radius:12px;
+    width:250px;
 }
 
+/* SHOW MAIN MENU */
+.nav-links.active{
+    display:flex;
+}
+
+/* LINKS */
 .nav-links a{
     text-decoration:none;
-    color:#1d2418;
+    color:#214734;
     font-size:18px;
-    transition:0.3s;
 }
 
-.nav-links a:hover{
-    color:#3f7d5a;
+/* ================= DROPDOWNS ================= */
+
+/* hidden by default */
+.dropdown,
+.nested{
+    display:none;
+    flex-direction:column;
+    margin-left:15px;
+    margin-top:10px;
+    gap:8px;
 }
 
-/* HERO */
+/* show when active */
+.dropdown.show{
+    display:flex;
+}
+
+.nested.show{
+    display:flex;
+}
+
+/* ================= HERO ================= */
+
 .hero{
     display:flex;
     justify-content:space-between;
@@ -78,34 +101,18 @@ body{
     font-size:85px;
 }
 
-.tagline{
-    margin-top:20px;
-    font-size:20px;
+.subtitle{
+    margin-top:25px;
+    font-size:22px;
     color:#2d3327;
-}
-
-/* BUTTON */
-.cta-button{
-    display:inline-block;
-    margin-top:30px;
-    padding:14px 28px;
-    border-radius:30px;
-    background:#214734;
-    color:white;
-    text-decoration:none;
-    font-size:17px;
-    transition:0.3s;
-}
-
-.cta-button:hover{
-    transform:scale(1.05);
-    background:#2f6047;
+    line-height:1.6;
+    max-width:450px;
 }
 
 /* IMAGE */
 .hero-image img{
     width:420px;
-    animation:float 4s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
 }
 
 @keyframes float{
@@ -114,7 +121,8 @@ body{
     100%{transform:translateY(0);}
 }
 
-/* DECOR */
+/* ================= DECOR ================= */
+
 .decor{
     position:absolute;
     border-radius:50%;
@@ -138,7 +146,8 @@ body{
     right:120px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media(max-width:900px){
 
     .hero{
@@ -157,11 +166,5 @@ body{
     .hero-image img{
         width:300px;
         margin-top:40px;
-    }
-
-    .nav-links{
-        gap:15px;
-        font-size:14px;
-        flex-wrap:wrap;
     }
 }
