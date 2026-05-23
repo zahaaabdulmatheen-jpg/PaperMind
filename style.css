@@ -210,5 +210,39 @@ body{
         gap:15px;
         font-size:14px;
         flex-wrap:wrap;
+        /* SUBJECT PAGE */
+
+.subjects-page{
+    padding:70px;
+    text-align:center;
+}
+
+.subjects-page h1{
+    font-size:60px;
+    color:#214734;
+    margin-bottom:50px;
+}
+
+.subject-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+}
+
+.subject-card{
+    background:rgba(255,255,255,0.2);
+    padding:50px 20px;
+    border-radius:20px;
+    text-decoration:none;
+    color:#1c2518;
+    font-size:28px;
+    transition:0.3s;
+    backdrop-filter:blur(5px);
+}
+
+.subject-card:hover{
+    transform:translateY(-10px);
+    background:#dfe8d0;
+}
     }
 }
