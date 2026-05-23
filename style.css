@@ -55,34 +55,70 @@ body{
     color: #3f5c45;
 }
 
-/* Dropdown */
+/* DROPDOWNS */
 
 .dropdown-menu,
 .sub-menu{
     display: none;
     position: absolute;
     background-color: #d8dfcb;
-    min-width: 200px;
+    min-width: 180px;
     border-radius: 10px;
-    padding: 10px 0;
+    padding: 5px 0;
+    list-style: none;
     z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
+
+/* Remove bullet points */
 
 .dropdown-menu li,
 .sub-menu li{
-    padding: 10px 20px;
+    list-style: none;
+    position: relative;
 }
 
-.dropdown:hover .dropdown-menu{
+/* Links inside dropdown */
+
+.dropdown-menu a,
+.sub-menu a{
     display: block;
+    padding: 8px 15px;
+    text-decoration: none;
+    color: #1e2b20;
+    font-size: 15px;
+    transition: 0.2s;
 }
 
-.sub-dropdown:hover .sub-menu{
+/* Hover */
+
+.dropdown-menu a:hover,
+.sub-menu a:hover{
+    background-color: #bcc6aa;
+}
+
+/* Show dropdown */
+
+.dropdown:hover > .dropdown-menu{
     display: block;
-    left: 100%;
+    top: 100%;
+    left: 0;
+}
+
+/* Show sub-menu neatly */
+
+.sub-dropdown:hover > .sub-menu{
+    display: block;
     top: 0;
+    left: 100%;
 }
 
+/* Small arrows */
+
+.arrow{
+    font-size: 8px;
+    margin-left: 3px;
+}
 /* HERO SECTION */
 
 .hero{
