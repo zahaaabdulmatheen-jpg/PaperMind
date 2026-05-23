@@ -20,23 +20,19 @@
         <!-- HAMBURGER -->
         <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-        <!-- LOGO -->
-        <div class="logo">📚 Paper Minds</div>
-
         <!-- NAV -->
         <ul id="menu" class="nav-links">
 
             <!-- PAST PAPERS -->
-            <li class="dropdown">
-                <a href="#">Past Papers ▾</a>
+            <li>
+                <a href="#" onclick="toggleDropdown(event, 'papers')">Past Papers ▾</a>
 
-                <ul class="dropdown-menu">
+                <ul id="papers" class="dropdown">
 
-                    <!-- A LEVEL -->
-                    <li class="nested-dropdown">
-                        <a href="#">A-Level ▸</a>
+                    <li>
+                        <a href="#" onclick="toggleDropdown(event, 'alevel')">A-Level ▸</a>
 
-                        <ul class="nested-menu">
+                        <ul id="alevel" class="nested">
                             <li>Economics</li>
                             <li>Accounting</li>
                             <li>Business Studies</li>
@@ -47,11 +43,10 @@
                         </ul>
                     </li>
 
-                    <!-- GCSE -->
-                    <li class="nested-dropdown">
-                        <a href="#">GCSE ▸</a>
+                    <li>
+                        <a href="#" onclick="toggleDropdown(event, 'gcse')">GCSE ▸</a>
 
-                        <ul class="nested-menu">
+                        <ul id="gcse" class="nested">
                             <li>Economics</li>
                             <li>Accounting</li>
                             <li>Business Studies</li>
@@ -65,30 +60,14 @@
                 </ul>
             </li>
 
-            <!-- MARK SCHEMES -->
-            <li class="dropdown">
-                <a href="#">Mark Schemes ▾</a>
-
-                <ul class="dropdown-menu">
-                    <li>Coming soon</li>
-                </ul>
-            </li>
-
-            <!-- SOLVE PAPERS -->
-            <li class="dropdown">
-                <a href="#">Solve Papers ▾</a>
-
-                <ul class="dropdown-menu">
-                    <li>AI Solver coming soon</li>
-                </ul>
-            </li>
+            <li><a href="#">Mark Schemes</a></li>
+            <li><a href="#">Solve Papers</a></li>
 
         </ul>
 
     </nav>
 
 </header>
-
 <!-- HERO -->
 <section class="hero">
 
