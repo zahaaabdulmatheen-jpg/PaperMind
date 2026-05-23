@@ -57,30 +57,63 @@ body{
 
 /* Dropdown */
 
+/* Dropdown Styling */
+
 .dropdown-menu,
 .sub-menu{
     display: none;
     position: absolute;
     background-color: #d8dfcb;
-    min-width: 200px;
-    border-radius: 10px;
+    min-width: 220px;
+    border-radius: 12px;
     padding: 10px 0;
+    list-style: none;
     z-index: 1000;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
+
+/* Remove bullet points */
 
 .dropdown-menu li,
 .sub-menu li{
-    padding: 10px 20px;
+    list-style: none;
+    position: relative;
 }
 
-.dropdown:hover .dropdown-menu{
+/* Dropdown links */
+
+.dropdown-menu a,
+.sub-menu a{
     display: block;
+    padding: 12px 20px;
+    color: #1e2b20;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
 }
 
-.sub-dropdown:hover .sub-menu{
+/* Hover effect */
+
+.dropdown-menu a:hover,
+.sub-menu a:hover{
+    background-color: #bcc6aa;
+    border-radius: 8px;
+}
+
+/* Show first dropdown */
+
+.dropdown:hover > .dropdown-menu{
     display: block;
-    left: 100%;
+    top: 100%;
+    left: 0;
+}
+
+/* Show subjects beside A Level / GCSE */
+
+.sub-dropdown:hover > .sub-menu{
+    display: block;
     top: 0;
+    left: 100%;
 }
 
 /* HERO SECTION */
