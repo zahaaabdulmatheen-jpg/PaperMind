@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Subjects</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      background: #f4f4f4;
+    }
+
+    .header {
+      background: #800000;
+      color: white;
+      padding: 20px;
+    }
+
+    .btn {
+      display: block;
+      width: 220px;
+      margin: 15px auto;
+      padding: 15px;
+      background: white;
+      color: #800000;
+      border: 2px solid #800000;
+      text-decoration: none;
+      border-radius: 10px;
+    }
+
+    .btn:hover {
+      background: #800000;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>📘 Subjects</h1>
+  </div>
+
+  <a class="btn" href="#">Maths</a>
+  <a class="btn" href="#">Business</a>
+  <a class="btn" href="#">Economics</a>
+
+  <br>
+  <a href="index.html">⬅ Back Home</a>
+
+</body>
+</html>
