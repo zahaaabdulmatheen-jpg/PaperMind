@@ -57,63 +57,30 @@ body{
 
 /* Dropdown */
 
-/* Dropdown Styling */
-
 .dropdown-menu,
 .sub-menu{
     display: none;
     position: absolute;
     background-color: #d8dfcb;
-    min-width: 220px;
-    border-radius: 12px;
+    min-width: 200px;
+    border-radius: 10px;
     padding: 10px 0;
-    list-style: none;
     z-index: 1000;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
 }
-
-/* Remove bullet points */
 
 .dropdown-menu li,
 .sub-menu li{
-    list-style: none;
-    position: relative;
+    padding: 10px 20px;
 }
 
-/* Dropdown links */
-
-.dropdown-menu a,
-.sub-menu a{
+.dropdown:hover .dropdown-menu{
     display: block;
-    padding: 12px 20px;
-    color: #1e2b20;
-    text-decoration: none;
-    font-size: 16px;
-    white-space: nowrap;
 }
 
-/* Hover effect */
-
-.dropdown-menu a:hover,
-.sub-menu a:hover{
-    background-color: #bcc6aa;
-    border-radius: 8px;
-}
-
-/* Show first dropdown */
-
-.dropdown:hover > .dropdown-menu{
+.sub-dropdown:hover .sub-menu{
     display: block;
-    top: 100%;
-    left: 0;
-}
-
-/* Show subjects beside A Level / GCSE */
-
-.sub-dropdown:hover > .sub-menu{
-    display: block;
-    top: 0;
     left: 100%;
+    top: 0;
 }
 
 /* HERO SECTION */
@@ -208,4 +175,62 @@ button:hover{
 
 .subject-card p{
     font-size: 16px;
+}
+/* Dropdown Styling */
+
+.dropdown-menu,
+.sub-menu{
+    display: none;
+    position: absolute;
+    background-color: #d8dfcb;
+    min-width: 220px;
+    border-radius: 12px;
+    padding: 10px 0;
+    list-style: none;
+    z-index: 1000;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Remove bullet points */
+
+.dropdown-menu li,
+.sub-menu li{
+    list-style: none;
+    position: relative;
+}
+
+/* Dropdown links */
+
+.dropdown-menu a,
+.sub-menu a{
+    display: block;
+    padding: 12px 20px;
+    color: #1e2b20;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+/* Hover effect */
+
+.dropdown-menu a:hover,
+.sub-menu a:hover{
+    background-color: #bcc6aa;
+    border-radius: 8px;
+}
+
+/* Show first dropdown */
+
+.dropdown:hover > .dropdown-menu{
+    display: block;
+    top: 100%;
+    left: 0;
+}
+
+/* Show subjects beside A Level / GCSE */
+
+.sub-dropdown:hover > .sub-menu{
+    display: block;
+    top: 0;
+    left: 100%;
 }
