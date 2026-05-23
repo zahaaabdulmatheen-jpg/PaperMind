@@ -4,105 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper Minds</title>
-
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Navigation Bar -->
     <header>
         <nav class="navbar">
-
-            <div class="logo-small">☰</div>
+            <div class="logo">☰</div>
 
             <ul class="nav-links">
 
+                <!-- Past Papers Dropdown -->
                 <li class="dropdown">
-                    <a href="#">Past Papers ▾</a>
+                    <a href="#">Past Papers ▼</a>
 
                     <ul class="dropdown-menu">
-                        <li class="nested-dropdown">
-                            <a href="#">GCSE ▸</a>
 
-                            <ul class="nested-menu">
-                                <li><a href="gcse/maths.html">Maths</a></li>
-                                <li><a href="gcse/biology.html">Biology</a></li>
-                                <li><a href="gcse/chemistry.html">Chemistry</a></li>
+                        <li class="sub-dropdown">
+                            <a href="#">A Level ▶</a>
+
+                            <ul class="sub-menu">
+                                <li><a href="subjects.html">Mathematics</a></li>
+                                <li><a href="subjects.html">Economics</a></li>
+                                <li><a href="subjects.html">Business</a></li>
                             </ul>
+
                         </li>
 
-                        <li class="nested-dropdown">
-                            <a href="#">A-Level ▸</a>
+                        <li class="sub-dropdown">
+                            <a href="#">GCSE ▶</a>
 
-                            <ul class="nested-menu">
-                                <li><a href="alevel/maths.html">Maths</a></li>
-                                <li><a href="alevel/physics.html">Physics</a></li>
-                                <li><a href="alevel/economics.html">Economics</a></li>
+                            <ul class="sub-menu">
+                                <li><a href="subjects.html">Mathematics</a></li>
+                                <li><a href="subjects.html">Economics</a></li>
+                                <li><a href="subjects.html">Business</a></li>
                             </ul>
+
                         </li>
+
                     </ul>
                 </li>
 
-                <li><a href="subjects.html">Subjects</a></li>
+                <!-- Marking Schemes Dropdown -->
+                <li class="dropdown">
+                    <a href="#">Marking Schemes ▼</a>
 
-                <li><a href="#">Mark Schemes ▾</a></li>
+                    <ul class="dropdown-menu">
 
-                <li><a href="#">Solve Papers ▾</a></li>
+                        <li class="sub-dropdown">
+                            <a href="#">A Level ▶</a>
+
+                            <ul class="sub-menu">
+                                <li><a href="subjects.html">Mathematics</a></li>
+                                <li><a href="subjects.html">Economics</a></li>
+                                <li><a href="subjects.html">Business</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="sub-dropdown">
+                            <a href="#">GCSE ▶</a>
+
+                            <ul class="sub-menu">
+                                <li><a href="subjects.html">Mathematics</a></li>
+                                <li><a href="subjects.html">Economics</a></li>
+                                <li><a href="subjects.html">Business</a></li>
+                            </ul>
+
+                        </li>
+
+                    </ul>
+                </li>
 
             </ul>
-
         </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
 
         <div class="hero-text">
-
-            <h1>PAPER<br><span>minds</span></h1>
+            <h1>PAPER<br><span>Minds</span></h1>
 
             <p class="tagline">
-                Study smarter. Score higher. Everything you need in one place.
+                Every paper. Every subject. One peaceful place to study smarter.
             </p>
 
-            <button>Explore Papers</button>
-
+            <button onclick="window.location.href='subjects.html'">
+                Explore Subjects
+            </button>
         </div>
 
         <div class="hero-image">
-            <img src="assets/books.png" alt="Books Illustration">
-        </div>
-
-    </section>
-
-    <div class="decor decor1"></div>
-    <div class="decor decor2"></div>
-    <div class="decor decor3"></div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GCSE Maths</title>
-
-    <link rel="stylesheet" href="../style.css">
-</head>
-<body>
-
-    <section class="subjects-page">
-
-        <h1>GCSE Maths Papers</h1>
-
-        <div class="subject-grid">
-
-            <a href="#">2024 Papers</a>
-            <a href="#">2023 Papers</a>
-            <a href="#">2022 Papers</a>
-            <a href="#">2021 Papers</a>
-
+            <img src="https://cdn-icons-png.flaticon.com/512/2436/2436874.png" alt="Books">
         </div>
 
     </section>
