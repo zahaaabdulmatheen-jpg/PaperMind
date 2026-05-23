@@ -102,3 +102,13 @@ function toggleMenu(){
 
 </body>
 </html>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("active");
+}
+
+function toggleDropdown(e, id){
+    e.preventDefault();
+    document.getElementById(id).classList.toggle("show");
+}
+</script>
