@@ -1,114 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paper Minds</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Minds</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<header>
+    <header>
+        <nav class="navbar">
 
-    <nav class="navbar">
+            <div class="logo-small">☰</div>
 
-        <!-- HAMBURGER -->
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
 
-        <!-- NAV -->
-        <ul id="menu" class="nav-links">
+                <li class="dropdown">
+                    <a href="#">Past Papers ▾</a>
 
-            <!-- PAST PAPERS -->
-            <li>
-                <a href="#" onclick="toggleDropdown(event, 'papers')">Past Papers ▾</a>
+                    <ul class="dropdown-menu">
+                        <li class="nested-dropdown">
+                            <a href="#">GCSE ▸</a>
 
-                <ul id="papers" class="dropdown">
+                            <ul class="nested-menu">
+                                <li><a href="gcse/maths.html">Maths</a></li>
+                                <li><a href="gcse/biology.html">Biology</a></li>
+                                <li><a href="gcse/chemistry.html">Chemistry</a></li>
+                            </ul>
+                        </li>
 
-                    <li>
-                        <a href="#" onclick="toggleDropdown(event, 'alevel')">A-Level ▸</a>
+                        <li class="nested-dropdown">
+                            <a href="#">A-Level ▸</a>
 
-                        <ul id="alevel" class="nested">
-                            <li>Economics</li>
-                            <li>Accounting</li>
-                            <li>Business Studies</li>
-                            <li>Physics</li>
-                            <li>Biology</li>
-                            <li>Chemistry</li>
-                            <li>Mathematics</li>
-                        </ul>
-                    </li>
+                            <ul class="nested-menu">
+                                <li><a href="alevel/maths.html">Maths</a></li>
+                                <li><a href="alevel/physics.html">Physics</a></li>
+                                <li><a href="alevel/economics.html">Economics</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-                    <li>
-                        <a href="#" onclick="toggleDropdown(event, 'gcse')">GCSE ▸</a>
+                <li><a href="subjects.html">Subjects</a></li>
 
-                        <ul id="gcse" class="nested">
-                            <li>Economics</li>
-                            <li>Accounting</li>
-                            <li>Business Studies</li>
-                            <li>Physics</li>
-                            <li>Biology</li>
-                            <li>Chemistry</li>
-                            <li>Mathematics</li>
-                        </ul>
-                    </li>
+                <li><a href="#">Mark Schemes ▾</a></li>
 
-                </ul>
-            </li>
+                <li><a href="#">Solve Papers ▾</a></li>
 
-            <li><a href="#">Mark Schemes</a></li>
-            <li><a href="#">Solve Papers</a></li>
+            </ul>
 
-        </ul>
+        </nav>
+    </header>
 
-    </nav>
+    <section class="hero">
 
-</header>
-<!-- HERO -->
-<section class="hero">
+        <div class="hero-text">
 
-    <!-- TEXT -->
-    <div class="hero-text">
+            <h1>PAPER<br><span>minds</span></h1>
 
-        <h1>PAPER<br><span>MINDS</span></h1>
+            <p class="tagline">
+                Study smarter. Score higher. Everything you need in one place.
+            </p>
 
-        <p class="subtitle">
-            Master your exams with structured past papers, mark schemes, and smart practice tools.
-        </p>
+            <button>Explore Papers</button>
 
-    </div>
+        </div>
 
-    <!-- IMAGE -->
-    <div class="hero-image">
-        <img src="assets/books.png" alt="Books">
-    </div>
+        <div class="hero-image">
+            <img src="assets/books.png" alt="Books Illustration">
+        </div>
 
-</section>
+    </section>
 
-<!-- DECOR -->
-<div class="decor decor1"></div>
-<div class="decor decor2"></div>
-<div class="decor decor3"></div>
-
-<script>
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
-}
-</script>
+    <div class="decor decor1"></div>
+    <div class="decor decor2"></div>
+    <div class="decor decor3"></div>
 
 </body>
 </html>
-<script>
-function toggleMenu(){
-    document.getElementById("menu").classList.toggle("active");
-}
-
-function toggleDropdown(e, id){
-    e.preventDefault();
-    document.getElementById(id).classList.toggle("show");
-}
-</script>
