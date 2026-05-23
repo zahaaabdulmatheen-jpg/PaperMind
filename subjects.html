@@ -1,93 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Subjects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f3f7f4;
-    }
-
-    .header {
-      background: #3f7d5a;
-      color: white;
-      padding: 15px;
-      text-align: center;
-    }
-
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 40px;
-      gap: 20px;
-    }
-
-    .card {
-      background: white;
-      width: 200px;
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .card h3 {
-      color: #3f7d5a;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #3f7d5a;
-      color: white;
-      text-decoration: none;
-      border-radius: 10px;
-    }
-
-    .btn:hover {
-      background: #2f5e43;
-    }
-
-    .back {
-      display: block;
-      margin-top: 30px;
-      text-align: center;
-      color: #3f7d5a;
-      text-decoration: none;
-    }
-  </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <div class="header">
-    <h2>📘 Subjects</h2>
-  </div>
+    <section class="subjects-page">
 
-  <div class="container">
+        <h1>Choose Your Subject</h1>
 
-    <div class="card">
-      <h3>📊 Maths</h3>
-      <a class="btn" href="#">Open</a>
-    </div>
+        <div class="subject-grid">
 
-    <div class="card">
-      <h3>💼 Business</h3>
-      <a class="btn" href="#">Open</a>
-    </div>
+            <a href="gcse/maths.html" class="subject-card">
+                Maths
+            </a>
 
-    <div class="card">
-      <h3>📈 Economics</h3>
-      <a class="btn" href="#">Open</a>
-    </div>
+            <a href="gcse/biology.html" class="subject-card">
+                Biology
+            </a>
 
-  </div>
+            <a href="gcse/chemistry.html" class="subject-card">
+                Chemistry
+            </a>
 
-  <a class="back" href="index.html">⬅ Back Home</a>
+            <a href="alevel/physics.html" class="subject-card">
+                Physics
+            </a>
+
+        </div>
+
+    </section>
 
 </body>
 </html>
