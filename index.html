@@ -7,12 +7,12 @@
     body {
       font-family: Arial;
       margin: 0;
-      background: #f3f7f4; /* soft calm background */
+      background: #f3f7f4;
     }
 
-    /* Header */
+    /* HEADER */
     .header {
-      background: #3f7d5a; /* soft green */
+      background: #3f7d5a;
       color: white;
       padding: 15px;
       display: flex;
@@ -25,15 +25,14 @@
       cursor: pointer;
     }
 
-    /* Side menu */
+    /* SIDE MENU */
     .side-menu {
       position: fixed;
       top: 0;
-      left: -250px;
-      width: 250px;
+      left: -260px;
+      width: 260px;
       height: 100%;
       background: #3f7d5a;
-      color: white;
       padding-top: 60px;
       transition: 0.3s;
     }
@@ -49,15 +48,16 @@
       background: #2f5e43;
     }
 
-    /* Hero section */
+    /* HERO */
     .hero {
       text-align: center;
       padding: 60px 20px;
     }
 
     .hero h1 {
-      font-size: 40px;
       color: #2f5e43;
+      font-size: 42px;
+      margin-bottom: 10px;
     }
 
     .hero p {
@@ -65,50 +65,81 @@
       font-size: 18px;
     }
 
+    /* CARDS */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 200px;
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      color: #3f7d5a;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 15px 25px;
+      margin-top: 10px;
+      padding: 10px 15px;
       background: #3f7d5a;
       color: white;
       text-decoration: none;
-      border-radius: 12px;
+      border-radius: 10px;
     }
 
     .btn:hover {
       background: #2f5e43;
-    }
-
-    /* Decorative books */
-    .books {
-      margin-top: 40px;
-      font-size: 60px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header -->
+  <!-- HEADER -->
   <div class="header">
     <div>📚 Past Papers Hub</div>
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
   </div>
 
-  <!-- Side Menu -->
+  <!-- SIDE MENU -->
   <div id="menu" class="side-menu">
     <a href="index.html">Home</a>
     <a href="subjects.html">Subjects</a>
   </div>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <div class="hero">
-    <div class="books">📖 📚 📖</div>
-
     <h1>Study Smarter</h1>
-    <p>Free past papers, revision resources, and exam prep tools</p>
+    <p>Past papers, revision tools, and exam prep in one place</p>
+  </div>
 
-    <a class="btn" href="subjects.html">Browse Subjects</a>
+  <!-- FEATURE CARDS -->
+  <div class="cards">
+    <div class="card">
+      <h3>📘 Subjects</h3>
+      <p>Browse all subjects</p>
+      <a class="btn" href="subjects.html">Open</a>
+    </div>
+
+    <div class="card">
+      <h3>📄 Past Papers</h3>
+      <p>Coming soon</p>
+    </div>
+
+    <div class="card">
+      <h3>🤖 AI Solver</h3>
+      <p>Coming soon</p>
+    </div>
   </div>
 
   <script>
@@ -116,7 +147,7 @@
       var menu = document.getElementById("menu");
 
       if (menu.style.left === "0px") {
-        menu.style.left = "-250px";
+        menu.style.left = "-260px";
       } else {
         menu.style.left = "0px";
       }
